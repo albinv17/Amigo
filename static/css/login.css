@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+:root {
+    --left-outer: aquamarine;
+    --left-inner: rgb(110, 247, 201);
+    --right-outer: whitesmoke;
+    --right-inner: white;
+}
+
+.maindiv {
+    display: flex;
+    height: 100vh;
+    width: fit-content;
+
+}
+
+.maindiv .left {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: var(--left-outer);
+    height: 100vh;
+    width: 40vw;
+}
+
+.left .left_in {
+    background-color: var(--left-inner);
+    height: 80vh;
+    width: 24vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.left_in h1 {
+    font-size: 2.8vw;
+}
+
+.left_in img {
+    width: 30%;
+}
+
+.maindiv .right {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: var(--right-outer);
+    height: 100vh;
+    width: 60vw;
+}
+
+.right .right_in {
+    background-color: var(--right-inner);
+    height: 80vh;
+    width: 40vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* font-family: 'Sanchez', serif; */
+    font-family: 'Fascinate Inline', cursive;
+}
+
+.input {
+    width: 15vw;
+    height: 4vh;
+    border: 0.1rem solid gainsboro;
+    border-radius: 0.5rem;
+    outline: none;
+}
+
+.right_in h1 {
+    text-align: center;
+    margin-bottom: 15%;
+    font-family: 'Fascinate Inline', cursive;
+    font-size: 2.8vw;
+
+}
+
+label {
+    font-size: 1.1vw;
+
+}
+
+#Pname {
+    width: 15vw;
+    height: 4vh;
+    border: 0.1rem solid gainsboro;
+    border-radius: 0.5rem;
+    outline: none;
+}
+
+form {
+    display: grid;
+}
+
+.right_in p {
+    text-align: center;
+}
+
+button {
+    padding: 0.6em;
+    border: none;
+    border-radius: 3vh;
+    background-color: var(--left-inner);
+    font-size: 1.4vw;
+}
+
+button:hover {
+    background-color: var(--right-inner);
+    color: var(--left-inner);
+    cursor: pointer;
+}
+
+p {
+    font-size: 1.2vw;
+}
