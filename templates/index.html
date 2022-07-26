@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amigo</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+</head>
+
+<body>
+
+
+    <h1 class="heading">Your Stories</h1>
+    <button class="logout"> <a href="/">Log Out</a></button>
+    <a href="/graph"><span class="analysis"><i class="fa fa-line-chart" aria-hidden="true"></i></span></a>
+    <!-- <span class="analysis"><i class="fa-solid fa-chart-mixed"></i></span> -->
+    <div class="container">
+        <!--image row start-->
+        <a href="{{ url_for('datef') }}">
+            <div class="row">
+                <div class="image">
+                    <div class="details">
+
+                        <h2>Add new story</span>
+                        </h2>
+
+                        <i class="fa fa-plus" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+            <!--image card layout start-->
+            {% for l in t %}
+            <div class="row">
+        </a>
+
+        <!--image row start-->
+
+
+        <!--image card start-->
+        <div class="image">
+            <img src="{{l['link']}}" alt="">
+            <div class="details">
+                <h2>{{l['date']}}</span>
+                </h2>
+                <p>{{l['text']}}</p>
+                <form action="/tile" method="POST">
+                    <div class="more">
+                        <button name="show" value="{{l['date']}}">Read <span>More</span></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!--image card end-->
+        </div>
+        {% endfor %}
+        <!--image row end-->
+    </div>
+    <!--image card layout end-->
+
+</body>
+
+</html>

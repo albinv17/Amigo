@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="{{ url_for('static',filename='/style3.css') }}">
+<link href="https://fonts.googleapis.com/css2?family=Arima:wght@100&family=Fascinate+Inline&family=Fuzzy+Bubbles&family=Monoton&family=Rubik+Moonrocks&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Arima:wght@100&family=Fascinate+Inline&family=Fuzzy+Bubbles&family=Monoton&family=Rubik+Moonrocks&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@200&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"
+/>
+
+<body>
+    <div class="main">
+        <button class="home"><i class="fa fa-home" aria-hidden="true"></i><a href="/tile">Home</a> </button>
+        <div class="diaryleft"></div>
+        <div class="diaryright">
+            <div class="block">
+                <div class="innerblock">
+                    <h1>What made your day {{t}} ?</h1>
+                    <br>
+
+                    <form action="/exp" method="POST">
+                        <select id="exp" name="exp" size="5" multiple>
+          <option value="Work">🤯Work</option>
+          <option value="Family">👫Family</option>
+          <option value="Education">👨‍🏫Education</option>
+          <option value="Food">🥖Food</option>
+          <option value="Traveling">🚎Traveling</option>
+          <option value="Friends">Friends</option>
+          <option value="Games">Games</option>
+          <option value="More">More</option>
+        </select>
+
+                        <!-- <input type="checkbox" name="fordCheckBox" id="Ford" value="Ford">
+        <label for="Ford"></label> -->
+
+                        <button class="submit" type="submit" name="submit" value="exp"><i class="fa-solid fa-arrow-right"></i></button>
+                    </form>
+                </div>
+                <br>
+
+            </div>
+        </div>
+    </div>
+    <br>
+    <button class="submit1"><a href="/day"><i class="fa-solid fa-arrow-left"></i></a></button>
+    <img class="ved" src="{{ url_for('video') }}" width="20%">
+
+
+</body>
+
+</html>

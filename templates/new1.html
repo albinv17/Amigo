@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="{{ url_for('static',filename='/style1.css') }}">
+<link href="https://fonts.googleapis.com/css2?family=Arima:wght@100&family=Fascinate+Inline&family=Fuzzy+Bubbles&family=Monoton&family=Rubik+Moonrocks&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@200&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"
+/>
+
+
+<body>
+
+    <div class="main">
+        <button class="home"><i class="fa fa-home" aria-hidden="true"></i><a href="/tile">Home</a> </button>
+        <div class="diaryleft"></div>
+        <div class="diaryright">
+            <div class="block">
+                <div class="innerblock">
+                    <h1>Hai, Ready To create A New story ?</h1>
+
+                    <form action="/date" method="POST">
+                        <label for="date">Select Date</label> <br>
+                        <input type="date" id="date" name="date">
+                        <br>
+                        <button class="submit" type="submit" name="submit" value="date"><i class="fa-solid fa-arrow-right"></i></button>
+
+
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+</body>
+
+</html>
+
+
+
+</body>
+
+</html>

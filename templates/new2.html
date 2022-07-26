@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="{{ url_for('static',filename='/style2.css') }}">
+<link href="https://fonts.googleapis.com/css2?family=Arima:wght@100&family=Fascinate+Inline&family=Fuzzy+Bubbles&family=Monoton&family=Rubik+Moonrocks&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Arima:wght@100&family=Fascinate+Inline&family=Fuzzy+Bubbles&family=Monoton&family=Rubik+Moonrocks&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@200&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"
+/>
+
+<body>
+    <div class="main">
+        <button class="home"><i class="fa fa-home" aria-hidden="true"></i><a href="/tile">Home</a> </button>
+        <div class="diaryleft"></div>
+        <div class="diaryright">
+            <div class="block">
+                <div class="innerblock">
+                    <h1>How was your day today ?</h1>
+                    <br>
+                    <form action="/rate" method="POST">
+
+                        <select class="sele" id="rate" name="rate" size="4" multiple>
+          <option value="Boring"><span class="em">&#128530</span>   Boring</option>
+          <option value="Awesome"> <span class="em">🤑 </span> Awesome</option>
+          <option value="Normal"><span class="em">😎 </span>  Normal</option>
+          <option value="Bad"> <span class="em">&#128543</span>   Bad</option>
+        </select>
+                        <button class="submit" type="submit" name="submit"><i class="fa-solid fa-arrow-right"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <button class="submit1"><a href="/date"><i class="fa-solid fa-arrow-left"></i></a></button>
+    <!-- <img class="ved" src="{{ url_for('video') }}" width="20%"> -->
+
+
+
+</body>
+
+</html>

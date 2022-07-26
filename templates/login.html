@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="loginstyle.css">
+    <link href="https://fonts.googleapis.com/css2?family=Sanchez:ital@1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/login.css') }}">
+    <title>Login</title>
+</head>
+
+<body>
+    <div class="maindiv">
+        <div class="left">
+            <div class="left_in">
+                <img src="{{ url_for('static',filename='Images/logo.png') }}" alt="">
+                <h1>Amigo</h1>
+                <br>
+                <p>Interactive Diary <br> with Emotion Analysis and Detection</p>
+            </div>
+        </div>
+        <div class="right">
+            <div class="right_in">
+                <h1>Login</h1>
+                <form action="/signin" method="POST">
+                    <label For="user">Email Id</label>
+                    <input class="input" type="email" id="user" name="email" />
+                    <br>
+                    <label For="lname">Password</label>
+
+                    <input class="input" type="password" id="lname" name="pass" placeholder="Enter your password" />
+                    <br />
+                    
+                    <button>Sign In</button>
+                    <br>
+                </form>
+                <p><a href="/signup">Signup</a> </p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

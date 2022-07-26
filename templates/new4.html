@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="{{ url_for('static',filename='/style4.css') }}">
+<link href="https://fonts.googleapis.com/css2?family=Arima:wght@100&family=Fascinate+Inline&family=Fuzzy+Bubbles&family=Monoton&family=Rubik+Moonrocks&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Arima:wght@100&family=Fascinate+Inline&family=Fuzzy+Bubbles&family=Monoton&family=Rubik+Moonrocks&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@200&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"
+/>
+
+<body>
+    <div class="mainblock">
+        <h1>Tell me more about your day ?</h1>
+        <img class="ved" src="{{ url_for('video') }}" width="20%"><br>
+        <div class="startstop">
+            <a href="{{url_for('re')}}"><i class="fa-solid fa-microphone"></i></a>
+            <a href="{{url_for('sn')}}"><i class="fa fa-microphone-slash" aria-hidden="true"></i></a><br>
+        </div>
+
+        <form action="/text" method="POST">
+
+            <textarea id="text" name="text" rows="10" cols="55">{{t}}</textarea><br>
+            <br>
+            <label id="lab">Add image</label><br>
+            <input type="file" name="file" id="file" accept="image/*" onchange="previewImage();">
+            <img id="preview">
+            <button class="sub" type="submit" name="submit" value="text">Finish</button>
+        </form>
+        <button class="submit1"><a href="/rate"><i id="left" class="fa-solid fa-arrow-left"></i></a></button>
+    </div>
+    <button class="home"><i class="fa fa-home" aria-hidden="true"></i><a href="/tile">Home</a> </button>
+    <script>
+        function previewImage() {
+            var file = document.getElementById("file").files;
+            if (file.length > 0) {
+                var fileReader = new FileReader();
+
+                fileReader.onload = function(event) {
+                    document.getElementById("lab").style.display = "none";
+                    document.getElementById("file").style.display = "none";
+                    document.getElementById("preview").setAttribute("src", event.target.result);
+                    document.getElementById("preview").setAttribute("width", 200);
+                    document.getElementById("preview").setAttribute("height", 150);
+
+                };
+
+                fileReader.readAsDataURL(file[0]);
+            }
+        }
+    </script>
+
+
+</body>
+
+</html>

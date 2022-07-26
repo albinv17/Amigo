@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{ url_for('static',filename='/css/mainhome.css') }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fascinate+Inline&family=Fuzzy+Bubbles&display=swap"
+    rel="stylesheet">
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- navbar -->
+  <div class='navbar'>
+    <div class="nav-left">
+      <!-- <i class="fa-solid fa-book"></i> -->
+      <img width="80px" height="80px" src="{{ url_for('static',filename='/Images/logo.png') }}" alt="">
+      <p>your private journal</p>
+    </div>
+    <div class="nav-right">
+      <button ><a href="/signin">Log in</a></button><a> or </a>
+      <button ><a href="/signup">Sign Up</a></button>
+    </div>
+  </div>
+  <!-- features (main body) -->
+  <section class="main">
+    <div class="heading">
+      <h1>Amigos</h1>
+      <p>Your private, 100% customizable online journal.</p>
+      <!-- <button>Start yout free journal Now!</button> -->
+    </div>
+  </section>
+  <section class="description">
+    <h1>What are you writing for?</h1>
+    <p>Whether you’re looking for a tool to record
+      your daily emotions and activities in a reflective
+      journal, keep track of
+      milestones , or even record your dreams in a dream journal, This diary has covered them all.</p>
+    <p> This diary contains all the tools you need to focus on the
+      ideas you want to
+      preserve, rather than the process of writing
+      itself.</p>
+    <button><a href="/signup">Get Started</a></button>
+  </section>
+  <hr class="dashed">
+  <section class="features">
+    <div class="feature">
+      <img src="{{ url_for('static',filename='/Images/security_icon.png') }}" alt="">
+      <h1>100% Private</h1>
+      <p>Designed to focus on privacy, your entries are totally private by default!</p>
+    </div>
+    <div class="feature">
+      <img src="{{ url_for('static',filename='/Images/book_search.png') }}" alt="">
+      <h1>Smart Journal Search</h1>
+      <p>Quickly and easily search through your journals, entries, and tags.</p>
+    </div>
+    <div class="feature">
+      <img src="{{ url_for('static',filename='/Images/emotion.png') }}" alt="">
+      <h1>Emotion Detection</h1>
+      <p>Your Emotion will be detected and a Emotion graph will be generated on a weekly basis</p>
+    </div>
+    <div class="feature">
+      <img src="{{ url_for('static',filename='/Images/emotion.png') }}" alt="">
+      <h1>Emotion Detection</h1>
+      <p>Your face will be analysed and Emotion will be detected</p>
+    </div>
+    <div class="feature">
+      <img src="{{ url_for('static',filename='/Images/graph.png') }}" alt="">
+      <h1>Weekly Emotion Graph</h1>
+      <p>Your Emotion will be detected and a Emotion graph will be generated on a weekly basis</p>
+    </div>
+    <div class="feature">
+      <img src="{{ url_for('static',filename='/Images/interaction.png') }}" alt="">
+      <h1>Fully Interactive Diary</h1>
+      <p>User can give responses in voice or in text format</p>
+    </div>
+  </section>
+
+  <footer class="foot">
+    <h3>Ready to start writing? Sign up now!</h3>
+    <button><a href="/signup">Get Started</a></button>
+  </footer>
+</body>
+<script>
+  window.addEventListener("scroll", function () {
+    let nav = document.querySelector('.navbar');
+    nav.classList.toggle("active", window.scrollY > 300);
+  })
+</script>
+
+</html>

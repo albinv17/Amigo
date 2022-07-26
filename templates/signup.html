@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="signupstyle.css">
+    <link href="https://fonts.googleapis.com/css2?family=Sanchez:ital@1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/signup.css') }}">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="maindiv">
+        <div class="left">
+            <div class="left_in">
+                <img src="{{ url_for('static',filename='Images/logo.png') }}" alt="">
+                <h1>Amigo</h1>
+                <br>
+                <p>Interactive Diary <br> with Emotion Analysis and Detection</p>
+            </div>
+        </div>
+        <div class="right">
+            <div class="right_in">
+                <h1>Sign Up</h1>
+                <form action="/signup" method="POST">
+                    <label For="fname">Email</label>
+                    <input class="input" type="email" name="email" id="fname" />
+                    <br />
+                    <label For="lname">Password</label>
+                    <input class="input" type="password" id="lname" name="pass" />
+                    <br />
+                    <label For="Pname">Confirm Password</label>
+                    <input class="input" type="password" id="Pname" name="conpass" />
+                    <br />
+                    <button type="submit" name="submit" value="signup">Signup</button>
+                </form>
+                <br>
+                <p><a href="/signin">Signin</a> </p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

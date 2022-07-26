@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <link rel="stylesheet" href="{{ url_for('static',filename='/style3.css') }}">
+<link
+    href="https://fonts.googleapis.com/css2?family=Arima:wght@100&family=Fascinate+Inline&family=Fuzzy+Bubbles&family=Monoton&family=Rubik+Moonrocks&display=swap"
+    rel="stylesheet">
+  
+  <body>
+    <h1>{{t['date']}}</h1>
+    <h2>Your day : {{t['rate']}}</h2>
+    <h2>With : {{t['exp']}}</h2>
+    <h2>Emotion : {{t['face']}}</h2>
+    <h2>Your story</h2>
+    <div class="field">
+    <h3>{{t['text']}}</h3><br>
+    </div>
+    <h2>Your pictures</h2>
+    
+    <img src="{{t['link']}}" width="500"><br>
+    
+    <div class="go">
+    <a href="{{ url_for('basic') }}"> Go back</a>
+    </div>
+    
+
+
+
+  </body>
+</html>
